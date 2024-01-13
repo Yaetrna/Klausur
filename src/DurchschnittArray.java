@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class DurchschnittArray {
     public static void main(String[] args) {
-
+        //
         int length = 7;
         double sum = 0.0;
         double[] array = new double[length];
