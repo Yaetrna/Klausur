@@ -2,35 +2,34 @@ import java.util.Scanner;
 
 public class DurchschnittArray {
     public static void main(String[] args) {
-        int length = 7;
-        double sum = 0.0;
-        double[] array = new double[length];
+        // Deklaration
+        int arrayLength = 7;
+        double arraySum = 0.0;
+        double arrayAverage;
+        double[] array = new double[arrayLength];
         Scanner scanner = new Scanner(System.in);
 
-        for (int enumerator = 0; enumerator < length; enumerator++) {
-            System.out.println("Geben Sie bitte die " + (enumerator + 1) + ". Note ein: ");
-            array[enumerator] = scanner.nextInt();
-            sum += array[enumerator];
+        // Eingabe
+        for (int iterator = 0; iterator < arrayLength; iterator++) {
+            System.out.println("Geben Sie bitte die " + (iterator + 1) + ". Note ein: ");
+            array[iterator] = scanner.nextInt();
+            arraySum += array[iterator];
         }
 
-        System.out.println("Der Durchschnitt lautet: " + sum / length);
+        // Verarbeitung
+        arrayAverage = arraySum / arrayLength;
 
-        System.out.println("Klassische for-Schleife beginnt jetzt");
+        // Ausgabe
+        System.out.println("Durchschnitt des Arrays: " + arrayAverage);
 
-        for (int enumerator = 0; enumerator < length; enumerator++) {
-            System.out.println("Kontrollausgabe - Note " + (enumerator + 1) + " : " + array[enumerator]);
+        for (int iterator = 0; iterator < arrayLength; iterator++) {
+            System.out.println("Kontrollausgabe - Note " + (iterator + 1) + " : " + array[iterator]);
         }
-
-        System.out.println("Klassische for-Schleife endet jetzt");
-
-        System.out.println("Moderne foreach-Schleife beginnt jetzt");
 
         int iterator = 0;
         for (double wert : array) {
             System.out.println("Messwert " + (iterator + 1) + ": " + wert);
             iterator++;
         }
-
-        System.out.println("Moderne foreach-Schleife endet jetzt");
     }
 }
