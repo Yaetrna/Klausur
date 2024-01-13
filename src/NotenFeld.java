@@ -5,6 +5,8 @@ public class NotenFeld {
         // Deklaration
         Scanner scanner = new Scanner(System.in);
         int numberOfGrades;
+        double minimum;
+        double maximum;
         double sumOfGrades = 0;
         double[] gradeArray;
 
@@ -23,9 +25,25 @@ public class NotenFeld {
             sumOfGrades += grade;
         }
 
-        // Ausgabe
-        System.out.println("Der Durchschnitt beträgt: " + sumOfGrades / numberOfGrades);
+        // Maximum und Minimum
+        minimum = gradeArray[0];
+        for (double num : gradeArray) {
+            if (num < minimum) {
+                minimum = num;
+            }
+        }
 
+        maximum = gradeArray[0];
+        for (double num : gradeArray) {
+            if (num > maximum) {
+                maximum = num;
+            }
+        }
+
+        // Ausgabe
+        System.out.println("Durchschnitt: " + sumOfGrades / numberOfGrades);
+        System.out.println("Maximum     : " + maximum);
+        System.out.println("Minimum     : " + minimum);
         for (double grade : gradeArray) {
             System.out.println(grade);
         }
