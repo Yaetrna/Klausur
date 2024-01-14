@@ -13,10 +13,10 @@ public class DurchschnittArray {
         for (int iterator = 0; iterator < arrayLength; iterator++) {
             System.out.println("Geben Sie bitte die " + (iterator + 1) + ". Note ein: ");
             array[iterator] = scanner.nextInt();
+            // Verarbeitung
             arraySum += array[iterator];
         }
 
-        // Verarbeitung
         arrayAverage = arraySum / arrayLength;
 
         // Ausgabe

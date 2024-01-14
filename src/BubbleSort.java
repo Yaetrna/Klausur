@@ -1,9 +1,11 @@
 public class BubbleSort {
     public static void main(String[] args) {
         int[] array = {5, 2, 1, 3, 5, 6, 9, 6, 0, 4};
+        System.out.println("Unsortierter Array: ");
         for (int num : array) System.out.print(num + " ");
         System.out.println();
         bubbleSort(array);
+        System.out.println("Sortierter Array: ");
         for (int num : array) System.out.print(num + " ");
     }
 
